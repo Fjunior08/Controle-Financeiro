@@ -37,7 +37,8 @@ export const RadioGroup = styled.div`
 
     input {
         margin-left: 20px;
-        accenter-color: black;
+        margin-right: 5px;
+        accent-color: black;
         margin-top: 0;
     }
 `;
