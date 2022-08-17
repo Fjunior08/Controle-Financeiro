@@ -28,9 +28,7 @@ const Grid = ({ itens, setItens }) => {
         ))}
       </C.Tbody>
     </C.Table>
-
-
   );
-}
+};
 
 export default Grid;

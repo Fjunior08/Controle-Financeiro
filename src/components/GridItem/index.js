@@ -23,7 +23,7 @@ const GridItem = ({ item, onDelete }) => {
             <FaTrash onClick={() => onDelete(item.id)} />
         </C.Td>
     </C.Tr>
-  )
-}
+  );
+};
 
-export default GridItem
+export default GridItem;
