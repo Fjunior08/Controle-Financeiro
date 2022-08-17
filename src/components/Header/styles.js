@@ -3,7 +3,8 @@
  export const Container = styled.div`
     height: 150px;
     text-align: center;
-    background: teal;
+    font: Gotham HTF Light;
+    background: #6F0DE0;
  `;
 
 export const Header = styled.h1``;
