@@ -4,7 +4,7 @@ import * as C from "./styles";
 
 import {  FaRegArrowAltCircleUp,  FaRegArrowAltCircleDown,  FaDollarSign, } from 'react-icons/fa';
 
-const Resume = ({ income, expense, total}) => { 
+const Resume = ({ income, expense, total }) => { 
   return (
       <C.Container>
         <ResumeItem
@@ -17,11 +17,7 @@ const Resume = ({ income, expense, total}) => {
          Icon={FaRegArrowAltCircleDown}
          value={expense}
          />
-        <ResumeItem
-         title="Total"
-         Icon={FaDollarSign}
-         value={total}
-         />
+        <ResumeItem title="Total" Icon={FaDollarSign} value={total} />
       </C.Container>
     );
 };

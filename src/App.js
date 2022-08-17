@@ -1,9 +1,8 @@
-import React, { useState, useEffect  } from 'react'
-import Header from './components/Header';
-import Resume from  './components/Resume';
-import Global from './styles/global';
-import Form from './components/Form';
-
+import React, { useState, useEffect  } from "react"
+import Form from "./components/Form";
+import Header from "./components/Header";
+import Resume from "./components/Resume";
+import Globalstyle from "./styles/global";
 
 const App = () => {
   const data = localStorage.getItem("transactions");
@@ -16,16 +15,15 @@ const App = () => {
 
   useEffect(() => {
     const amountExpense = transactionsList
-      .filter((item) => !item.expense)
+      .filter((item) => item.expense)
       .map((transaction) => Number(transaction.amount));
 
     const amountIncome = transactionsList
-      .filter((item) => !item.income)
+      .filter((item) => !item.expense)
       .map((transaction) => Number(transaction.amount));
     
     const expense = amountExpense.reduce((acc, cur) => acc + cur, 0).toFixed(2);
-    const income = amountIncome.reduce((acc, cur) => acc + cur, 0).toFixed(2);  
-
+    const income = amountIncome.reduce((acc, cur) => acc + cur, 0).toFixed(2);
 
     const total = Math.abs(income - expense).toFixed(2);
     
@@ -47,7 +45,7 @@ const App = () => {
         <Header />
         <Resume income={income} expense={expense} total={total} />
         <Form handleAdd={handleAdd} transactionsList={transactionsList} setTransactionsList={setTransactionsList}/>
-        <Global />
+        <Globalstyle />
     </>
   )
 }
